@@ -248,8 +248,7 @@ function unquarantine() {
 # Install Grunt plugins and add them as `devDependencies` to `package.json`
 # Usage: `gi contrib-watch contrib-uglify zopfli`
 function gi() {
-	local IFS=,
-	eval npm install --save-dev grunt-{"$*"}
+	npm install --save-dev ${*/#/grunt-}
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
@@ -259,6 +258,16 @@ function s() {
 		subl .
 	else
 		subl "$@"
+	fi
+}
+
+# `a` with no arguments opens the current directory in Atom Editor, otherwise
+# opens the given location
+function a() {
+	if [ $# -eq 0 ]; then
+		atom .
+	else
+		atom "$@"
 	fi
 }
 
@@ -286,6 +295,7 @@ function o() {
 # defaults to `patch`
 function np() {
 	git pull --rebase && \
+	rm -rf node_modules && \
 	npm install && \
 	npm test && \
 	npm version ${1:=patch} && \

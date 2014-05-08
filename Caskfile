@@ -1,0 +1,25 @@
+# Install native apps
+# Usage: `brew bundle Caskfile`
+
+install caskroom/cask/brew-cask
+tap caskroom/versions
+
+cask install ccleaner
+cask install github
+cask install google-chrome
+cask install google-hangouts
+cask install imagealpha
+cask install imageoptim
+cask install lastpass-universal
+cask install mplayerx
+cask install rescue-time
+cask install sequel-pro
+cask install skype
+cask install spotify
+cask install sublime-text
+cask install subtitles
+cask install the-unarchiver
+cask install u-torrent
+cask install vagrant
+cask install virtualbox
+cask install vlc
