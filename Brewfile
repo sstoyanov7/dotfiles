@@ -25,6 +25,7 @@ install wget --enable-iri
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
 install homebrew/dupes/grep
+install homebrew/dupes/zlib
 install homebrew/php/php55 --with-gmp
 install homebrew/php/php55-xdebug
 install homebrew/php/composer
