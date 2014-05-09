@@ -40,18 +40,7 @@ if [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion
 fi
 
-# Add bash completion for brew installed formuale
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	source $(brew --prefix)/etc/bash_completion
-fi
-
-# If available use git completion
-# Installed by brew in this location
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
-	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-fi
-
-# Enable hub completion if available
-if [ -f $HOME/src/hub/etc/hub.bash_completion.sh ]; then
-	source $HOME/src/hub/etc/hub.bash_completion.sh
+if [ -n "`which brew`" ] && [ -f "$HOME/.brew.bashrc" ]
+then
+    source $HOME/.brew.bashrc
 fi

@@ -7,9 +7,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias b="brew"
 alias c="composer"
-alias cask="brew cask"
 alias d="cd ~/dotfiles"
 alias dc="cd ~/Documents"
 alias dl="cd ~/Downloads"
@@ -34,9 +32,6 @@ alias vg="vagrant"
 
 # Enable git command  autocompletion for 'g' as well
 complete -o default -o nospace -F _git g
-
-# Enable brew command  autocompletion for 'b' as well
-complete -o default -o nospace -F _brew b
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

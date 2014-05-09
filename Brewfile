@@ -19,6 +19,9 @@ install gnu-sed --default-names
 # Install Bash 4
 install bash
 
+# Install Bash completion
+install bash-completion
+
 # Install wget with IRI support
 install wget --enable-iri
 
@@ -46,6 +49,7 @@ install pv
 install rename
 #install sqlmap
 install tree
+install vagrant-completion
 install webkit2png
 install xpdf
 install zopfli
