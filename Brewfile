@@ -32,6 +32,7 @@ install homebrew/php/composer
 
 # Install other useful binaries
 install ack
+install grc
 install git
 install imagemagick --with-webp
 # install nmap
