@@ -8,7 +8,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH"
 
 # Add `$(npm --global prefix)/bin` to the `$PATH`
-export PATH="$(npm --global prefix)/bin:$PATH"
+export PATH=$HOME/node_modules/bin:$PATH
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
