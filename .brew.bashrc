@@ -31,3 +31,6 @@ alias cask="brew cask"
 
 # Enable brew command autocompletion for `b` alias as well
 complete -o default -F _brew b
+
+# Enable vagrant command autocompletion for `vg` alias as well
+complete -o default -F _vagrant vg
