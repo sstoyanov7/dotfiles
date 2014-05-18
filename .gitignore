@@ -48,3 +48,13 @@ Thumbs.db
 *.ttf
 *.otf
 *.woff
+
+# Documents #
+#############
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xlc
+*.xlsx
