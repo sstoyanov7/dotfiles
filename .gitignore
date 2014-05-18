@@ -42,3 +42,9 @@ Thumbs.db
 *.log
 # *.sql
 # *.sqlite
+
+# Fonts #
+#########
+*.ttf
+*.otf
+*.woff
