@@ -24,6 +24,10 @@ let mapleader=","
 " set noeol
 " Expand tabs to spaces
 set expandtab
+" Make indentation smarter
+set autoindent
+set smartindent
+set cindent
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -43,8 +47,9 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
+" Make tabs as wide as four spaces
 set tabstop=4
+set shiftwidth=4
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
