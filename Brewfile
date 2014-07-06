@@ -32,6 +32,7 @@ install homebrew/dupes/zlib
 install homebrew/php/php55 --with-gmp
 install homebrew/php/php55-xdebug
 install homebrew/php/composer
+install homebrew/php/php-code-sniffer
 
 # Install other useful binaries
 install ack
@@ -51,7 +52,6 @@ install rename
 install tree
 install vagrant-completion
 install webkit2png
-install xpdf
 install zopfli
 
 # Remove outdated versions from the cellar
