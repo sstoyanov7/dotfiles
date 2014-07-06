@@ -275,20 +275,24 @@
 # 
 # gh: is a shorthand for git@github.com
 [url "git@github.com:"]
+
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 
 # github: is a shorthand for git://github.com/
 [url "git://github.com/"]
+
 	insteadOf = "github:"
 
 # gst: is a shorthand for git://gist.github.com/
 [url "git@gist.github.com:"]
+
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 
 # gist: is a shofthand for git://gist.github.com/
 [url "git://gist.github.com/"]
+
 	insteadOf = "gist:"

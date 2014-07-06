@@ -19,6 +19,7 @@ cask install lastpass-universal
 cask install macvim
 cask install mono-mre
 cask install mplayerx
+cask install opera
 cask install rescue-time
 cask install sequel-pro
 cask install skype
