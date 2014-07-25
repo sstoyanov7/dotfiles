@@ -46,6 +46,7 @@ install git
 install imagemagick --with-webp
 install hub
 install htop-osx
+install libidn
 install node # This installs `npm` too using the recommended installation method
 install p7zip
 install pigz
