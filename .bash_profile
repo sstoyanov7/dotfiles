@@ -56,3 +56,8 @@ if [ -n "`which brew`" ] && [ -f "$HOME/.brew.bashrc" ]
 then
     source $HOME/.brew.bashrc
 fi
+
+# Add `rbenv init` to the shell to enable shims and autocompletion
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)"
+fi;
