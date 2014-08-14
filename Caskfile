@@ -40,3 +40,15 @@ cask install u-torrent
 cask install vagrant
 cask install virtualbox
 cask install vlc
+
+# Quick Look plugins
+# See https://github.com/sindresorhus/quick-look-plugins
+cask install qlcolorcode
+cask install qlstephen
+cask install qlmarkdown
+cask install quicklook-json
+cask install qlprettypatch
+cask install quicklook-csv
+cask install betterzipql
+cask install webp-quicklook
+cask install suspicious-package
