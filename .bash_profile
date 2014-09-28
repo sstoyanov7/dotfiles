@@ -61,6 +61,3 @@ fi
 if which rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi;
-
-# Enable bookmarking
-[[ -s ~/Projects/bookmark/bookmarker.sh ]] && . ~/Projects/bookmark/bookmarker.sh
