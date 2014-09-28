@@ -32,8 +32,8 @@ install vim --override-system-vi
 install homebrew/dupes/grep
 install homebrew/dupes/screen
 install homebrew/dupes/zlib
-install homebrew/php/php55 --with-gmp
-install homebrew/php/php55-xdebug
+install homebrew/php/php56 --with-gmp
+install homebrew/php/php56-xdebug
 install homebrew/php/composer
 install homebrew/php/php-code-sniffer
 
