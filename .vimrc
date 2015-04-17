@@ -10,6 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'ryanss/vim-hackernews'
+
 Plugin 'jpo/vim-railscasts-theme'
 
 " All of your Plugins must be added before the following line
