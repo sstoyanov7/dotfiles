@@ -4,42 +4,30 @@
 install caskroom/cask/brew-cask
 tap caskroom/versions
 
-cask install appcleaner
 cask install atom
-cask install calibre
-cask install ccleaner
 cask install easysimbl
 cask install firefox
-cask install fluid
-cask install github
-cask install google-plus-auto-backup
+cask install google-adwords-editor
 cask install google-chrome-dev
-cask install google-chrome-canary
 cask install google-drive
 cask install google-hangouts
+cask install google-photos-backup
 cask install imagealpha
 cask install imageoptim
-cask install java
 cask install lastpass-universal
 cask install licecap
-cask install macvim
-cask install mono-mre
 cask install mplayerx
-cask install opera
-cask install picasa
 cask install rescue-time
-cask install sequel-pro
+cask install sequel-pro-nightly
 cask install skype
 cask install slack
 cask install spotify
 cask install sublime-text3
 cask install subtitles
-cask install teamviewer
 cask install the-unarchiver
 cask install u-torrent
 cask install vagrant
 cask install virtualbox
-cask install vlc
 
 # Quick Look plugins
 # See https://github.com/sindresorhus/quick-look-plugins
@@ -52,3 +40,9 @@ cask install quicklook-csv
 cask install betterzipql
 cask install webp-quicklook
 cask install suspicious-package
+
+# Cleanup downloads
+cask cleanup
+
+# List installed casks
+cask list

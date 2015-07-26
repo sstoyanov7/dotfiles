@@ -19,8 +19,6 @@ install gnu-sed --default-names
 # Install Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 install bash
-install bash-completion
-
 # Install Bash completion
 install bash-completion
 
@@ -34,18 +32,17 @@ install homebrew/dupes/screen
 install homebrew/dupes/zlib
 install homebrew/php/php56 --with-gmp
 install homebrew/php/php56-xdebug
-install homebrew/php/composer
 install homebrew/php/php-code-sniffer
 
 # Install other useful binaries
 install ack
 install bfg
-install foremost
 install grc
 install git
 install imagemagick --with-webp
 install hub
 install htop-osx
+install lastpass-cli --with-pinentry --with-doc
 install libidn
 install node # This installs `npm` too using the recommended installation method
 install p7zip
@@ -53,6 +50,7 @@ install pigz
 install pv
 install rbenv
 install rename
+install ruby-build
 install tree
 install vagrant-completion
 install webkit2png
@@ -60,3 +58,6 @@ install zopfli
 
 # Remove outdated versions from the cellar
 cleanup
+
+# Print installed formulae
+list
