@@ -54,7 +54,7 @@ brew install rbenv
 brew install rename
 brew install ruby-build
 brew install tree
-brew install vagrant-completion
+brew install homebrew/completions/vagrant-completion
 brew install webkit2png
 brew install zopfli
 
