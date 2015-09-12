@@ -4,8 +4,8 @@ export PATH="$HOME/bin:$PATH";
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,grc.bashrc,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
@@ -22,19 +22,12 @@ shopt -s cdspell;
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-	shopt -s "$option" 2> /dev/null;
+    shopt -s "$option" 2> /dev/null;
 done;
-
-# Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-	source "$(brew --prefix)/etc/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	complete -o default -o nospace -F _git g;
+    complete -o default -o nospace -F _git g;
 fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
@@ -49,19 +42,38 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 if [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion
+    source /etc/bash_completion
 fi
 
 # Enable Shell integration for iTerm2
 # http://iterm2.com/shell_integration.html
 source ~/.iterm2_shell_integration.bash
 
-if [ -n "`which brew`" ] && [ -f "$HOME/.brew.bashrc" ]
-then
-    source $HOME/.brew.bashrc
+if [ command -v brew ]; then
+    # Add bash completion for brew installed formuale
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        source $(brew --prefix)/etc/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        source /etc/bash_completion;
+    fi
+
+    # Add completion for `brew` itself.
+    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+
+    # Brew & Cask aliases
+    alias b="brew"
+    alias cask="brew cask"
+
+    # Enable brew command autocompletion for `b` alias as well
+    complete -o default -F _brew b
+
+    # Enable vagrant command autocompletion for `vg` alias as well
+    complete -o default -F _vagrant vg
+elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion;
 fi
 
 # Add `rbenv init` to the shell to enable shims and autocompletion
-if which rbenv > /dev/null; then
+if command -v rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi;
