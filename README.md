@@ -1,38 +1,41 @@
-# Mathias’s dotfiles
+# hkdobrev’s dotfiles
 
 ![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
 
 ## Installation
 
-### Using Git and the bootstrap script
+### Using Git and the install script
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+The repository is made for use inside your `$HOME` directory. It will ignore everything other than what it explicitly is tracking already.
 
-```bash
-git clone https://github.com/hkdobrev/dotfiles.git && cd dotfiles && source bootstrap.sh
+``` bash
+cd $HOME
+git init
+git remote add origin git@github.com:hkdobrev/dotfiles.git
+git fetch origin master
+git reset --hard origin/master
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+It is recommended to fork the repo and adjust it as needed.
 
-```bash
-source bootstrap.sh
+#### Installing initial tools
+
+When setting up a new computer use the `install.sh` script to install Homebrew, Homebrew budle, rbenv, vim-plug, Composer, set up Bash 4 and the XCode CLI tools.
+
+``` bash
+./install.sh
 ```
 
-Alternatively, to update while avoiding the confirmation prompt:
+# Updating
+
+To later update the dotfiles configuration:
 
 ```bash
-set -- -f; source bootstrap.sh
+cd $HOME
+git pull
 ```
 
-### Git-free install
-
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/hkdobrev/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
+To update your software run the `update` command which will update Ruby gems, Homebrew formulae, Composer globals and others.
 
 ### Specify the `$PATH`
 
@@ -71,20 +74,12 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-### Install Homebrew formulae
+### Install Homebrew formulae and Cask apps
 
 When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
 
 ```bash
 brew bundle ~/Brewfile
-```
-
-### Install native apps with `brew cask`
-
-You could also install native apps with [`brew cask`](https://github.com/phinze/homebrew-cask):
-
-```bash
-brew bundle ~/Caskfile
 ```
 
 ## Feedback
@@ -97,6 +92,8 @@ Suggestions/improvements
 | [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
 | [Mathias Bynens](http://mathiasbynens.be/) |
+
+This repo is a fork of the originial dotfiles of Mathias Bynens, it is heavily modified by Haralan Dobrev for his own purposes.
 
 ## Thanks to…
 
