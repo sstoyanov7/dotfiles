@@ -49,7 +49,7 @@ fi
 # http://iterm2.com/shell_integration.html
 source ~/.iterm2_shell_integration.bash
 
-if [ command -v brew ]; then
+if command -v brew >/dev/null; then
     # Add bash completion for brew installed formuale
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         source $(brew --prefix)/etc/bash_completion
