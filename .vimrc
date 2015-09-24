@@ -4,6 +4,10 @@ Plug 'jpo/vim-railscasts-theme'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
