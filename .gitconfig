@@ -269,6 +269,10 @@
 	# If you use branches with different remote name, use "upstream"
 	default = simple
 
+[rebase]
+    # Use --autosquash by default. It's not like one would write !fixup message by accident.
+    autoSquash = true
+
 # URL shorthands
 # 
 # See `git help config` and search for "url.<base>"
