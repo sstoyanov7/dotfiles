@@ -41,7 +41,7 @@ Thumbs.db
 ######################
 *.log
 # *.sql
-# *.sqlite
+*.sqlite
 
 # Fonts #
 #########
@@ -58,3 +58,4 @@ Thumbs.db
 *.pptx
 *.xlc
 *.xlsx
+*.csv
