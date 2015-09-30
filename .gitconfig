@@ -273,6 +273,9 @@
     # Use --autosquash by default. It's not like one would write !fixup message by accident.
     autoSquash = true
 
+    # Use --autostash when running git pull --rebase and when rebasing interactively
+    autoStash = true
+
 # URL shorthands
 # 
 # See `git help config` and search for "url.<base>"
