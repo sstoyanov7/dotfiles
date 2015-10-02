@@ -213,10 +213,10 @@
 
 	# Treat
 	#  - spaces before tabs,
-	#  - lines that are indented with 8 or more spaces,
+        #  - lines that are indented with tabs,
 	#  - all kinds of trailing whitespace
 	# as an error.
-	whitespace = space-before-tab,trailing-space
+        whitespace = space-before-tab,trailing-space,tab-in-indent
 
 [diff]
 	# Use more time to create better diffs.
