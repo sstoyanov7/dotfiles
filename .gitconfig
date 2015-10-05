@@ -96,7 +96,7 @@
 
     # In case of fire
     # https://twitter.com/bozhobg/status/650265599671693312
-    fire = "!git commit --all && git push -u origin HEAD"
+    fire = "!git commit --all && git push --set-upstream origin HEAD && echo 'LEAVE BUILDING!!!'"
 
     # Find commits by commit message
     fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
