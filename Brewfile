@@ -49,6 +49,7 @@ brew 'jp2a'
 brew 'jpegoptim'
 brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
 brew 'node' # This installs `npm` too using the recommended installation method
+brew 'openssl'
 brew 'optipng'
 brew 'p7zip'
 brew 'pigz'
