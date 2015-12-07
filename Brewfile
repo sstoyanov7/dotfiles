@@ -61,6 +61,8 @@ brew 'tree'
 brew 'webkit2png'
 brew 'zopfli'
 
+tap 'homebrew/command-not-found'
+
 # Install Brew Cask along with Desktop apps
 brew 'caskroom/cask/brew-cask'
 tap 'caskroom/cask'
