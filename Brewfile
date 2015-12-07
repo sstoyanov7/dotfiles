@@ -1,0 +1,107 @@
+# Install GNU core utilities (those that come with OS X are outdated)
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew 'coreutils'
+# Install some other useful utilities like `sponge`
+brew 'moreutils'
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
+brew 'findutils'
+# Install GNU `sed`, overwriting the built-in `sed`
+brew 'gnu-sed', args: ['default-names']
+# Install Bash 4
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
+brew 'bash'
+# Install Bash completion
+brew 'bash-completion'
+
+# Install useful completions
+brew 'homebrew/completions/apm-bash-completion'
+brew 'homebrew/completions/brew-cask-completion'
+brew 'homebrew/completions/bundler-completion'
+brew 'homebrew/completions/gem-completion'
+brew 'homebrew/completions/grunt-completion'
+brew 'homebrew/completions/open-completion'
+brew 'homebrew/completions/vagrant-completion'
+
+# Install wget with IRI support
+brew 'wget', args: ['enable-iri']
+
+# Install more recent versions of some OS X tools
+brew 'vim', args: ['override-system-vi']
+brew 'homebrew/dupes/grep'
+brew 'homebrew/dupes/screen'
+brew 'homebrew/dupes/zlib'
+
+# Install PHP and tools
+brew 'homebrew/php/php70', args: ['with-gmp']
+brew 'homebrew/php/php70-xdebug'
+brew 'homebrew/php/php-code-sniffer'
+brew 'homebrew/php/phpunit'
+
+# Install other useful binaries
+brew 'ack'
+brew 'bfg'
+brew 'cmake'
+brew 'git'
+brew 'imagemagick', args: ['with-webp']
+brew 'hub'
+brew 'htop-osx'
+brew 'jp2a'
+brew 'jpegoptim'
+brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
+brew 'node' # This installs `npm` too using the recommended installation method
+brew 'optipng'
+brew 'p7zip'
+brew 'pigz'
+brew 'pv'
+brew 'python3'
+brew 'rbenv'
+brew 'rename'
+brew 'ruby-build'
+brew 'tree'
+brew 'webkit2png'
+brew 'zopfli'
+
+# Install Brew Cask along with Desktop apps
+brew 'caskroom/cask/brew-cask'
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+
+cask 'atom'
+cask 'easysimbl'
+cask 'firefox'
+cask 'font-source-code-pro'
+cask 'google-chrome-dev'
+cask 'google-drive'
+cask 'google-hangouts'
+cask 'google-photos-backup'
+cask 'imagealpha'
+cask 'imageoptim'
+cask 'iterm2-nightly'
+cask 'lastpass'
+cask 'licecap'
+cask 'monodraw'
+cask 'mplayerx'
+cask 'rescuetime'
+cask 'sequel-pro-nightly'
+cask 'sketch'
+cask 'slack'
+cask 'sqlitebrowser'
+cask 'sublime-text-dev'
+cask 'subtitles'
+cask 'the-unarchiver'
+cask 'utorrent'
+cask 'vagrant'
+cask 'virtualbox'
+
+# Quick Look plugins
+# See https://github.com/sindresorhus/quick-look-plugins
+cask 'betterzipql'
+cask 'qlcolorcode'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'suspicious-package'
+cask 'qlstephen'
+cask 'webpquicklook'
