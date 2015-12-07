@@ -238,6 +238,9 @@
     # See`git help config` and search for "diff.tool"
     tool=opendiff
 
+[diff "asciidiff"]
+    textconv = ~/bin/img-ascii-diff
+
 [difftool]
     # Difftool will not prompt for every file.
     # Use --prompt to override.
