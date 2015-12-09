@@ -8,8 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias c="composer"
-alias d="cd ~/projects/dotfiles"
-alias dc="cd ~/Documents"
+alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="hub"
