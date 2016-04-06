@@ -24,6 +24,7 @@ alias o="open"
 alias oo="open ."
 alias p="cd ~/projects"
 alias python="python3"
+alias pip="pip3"
 alias s="subl ."
 alias t="travis"
 alias tl="travis lint"
@@ -31,7 +32,7 @@ alias tm="travis monitor --my-repos --notify growl"
 alias v="vim"
 alias vg="vagrant"
 
-# Enable git command  autocompletion for 'g' as well
+# Enable git command autocompletion for 'g' as well
 complete -o default -o nospace -F _git g
 
 # Detect which `ls` flavor is in use
@@ -64,7 +65,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm update npm -g; npm update -g; gem update --system; gem update; composer global update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup -s; npm update npm -g; npm update -g; gem update --system; gem update; gem cleanup; composer global update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
