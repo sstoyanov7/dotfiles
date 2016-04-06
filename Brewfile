@@ -40,6 +40,7 @@ brew 'homebrew/php/phpunit'
 # Install other useful binaries
 brew 'ack'
 brew 'bfg'
+brew 'cloc'
 brew 'cmake'
 brew 'git'
 brew 'imagemagick', args: ['with-webp']
@@ -47,6 +48,7 @@ brew 'hub'
 brew 'htop-osx'
 brew 'jp2a'
 brew 'jpegoptim'
+brew 'keybase'
 brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
 brew 'node' # This installs `npm` too using the recommended installation method
 brew 'openssl'
@@ -60,6 +62,7 @@ brew 'rename'
 brew 'ruby-build'
 brew 'tree'
 brew 'webkit2png'
+brew 'youtube-dl'
 brew 'zopfli'
 
 tap 'homebrew/command-not-found'
