@@ -68,7 +68,6 @@ brew 'zopfli'
 tap 'homebrew/command-not-found'
 
 # Install Brew Cask along with Desktop apps
-brew 'caskroom/cask/brew-cask'
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
