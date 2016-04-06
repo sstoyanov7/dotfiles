@@ -1,6 +1,8 @@
 {
-    "devDependencies": {
-        "grunt-cli": "^0.1.13",
-        "resume": "^0.4.8"
-    }
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "gulp": "^3.9.0",
+    "jslint": "^0.9.6",
+    "resume": "^0.4.8"
+  }
 }
