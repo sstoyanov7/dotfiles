@@ -51,6 +51,8 @@ brew 'jp2a'
 brew 'jpegoptim'
 brew 'keybase'
 brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
+tap 'neovim/neovim'
+brew 'neovim/neovim/neovim'
 brew 'node' # This installs `npm` too using the recommended installation method
 brew 'openssl'
 brew 'optipng'
