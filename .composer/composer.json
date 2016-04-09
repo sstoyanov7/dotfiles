@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpunit/phpunit": "^4.8",
+        "clippings/composer-init": "^0.3.2",
+        "phploc/phploc": "^2.1",
+        "bamarni/symfony-console-autocomplete": "^1.0"
+    }
+}
