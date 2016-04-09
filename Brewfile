@@ -16,6 +16,7 @@ brew 'bash-completion'
 # Install useful completions
 brew 'homebrew/completions/apm-bash-completion'
 brew 'homebrew/completions/brew-cask-completion'
+brew 'homebrew/completions/composer-completion'
 brew 'homebrew/completions/bundler-completion'
 brew 'homebrew/completions/gem-completion'
 brew 'homebrew/completions/grunt-completion'
