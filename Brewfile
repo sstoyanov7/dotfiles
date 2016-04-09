@@ -65,8 +65,6 @@ brew 'webkit2png'
 brew 'youtube-dl'
 brew 'zopfli'
 
-tap 'homebrew/command-not-found'
-
 # Install Brew Cask along with Desktop apps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
