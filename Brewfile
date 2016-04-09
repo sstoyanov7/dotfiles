@@ -24,7 +24,7 @@ brew 'homebrew/completions/open-completion'
 brew 'homebrew/completions/vagrant-completion'
 
 # Install wget with IRI support
-brew 'wget', args: ['enable-iri']
+brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some OS X tools
 brew 'vim', args: ['override-system-vi']
