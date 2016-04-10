@@ -57,9 +57,6 @@ if command -v brew >/dev/null; then
         source /etc/bash_completion;
     fi
 
-    # Add completion for `brew` itself.
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-
     # Brew & Cask aliases
     alias b="brew"
     alias cask="brew cask"
