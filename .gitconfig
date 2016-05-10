@@ -190,6 +190,7 @@
     frag = magenta
     old = red
     new = green
+    whitespace = red reverse
 
 [color "status"]
     # Changed files are yellow.
