@@ -66,11 +66,14 @@
     # Credit an author on the latest commit
     credit = "!f() { git commit --amend --author \"$1 <$2>\" --reuse-message=HEAD; }; f"
 
-    # Diff working tree to HEAD (a.k.a last commit)
-    d = diff
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 
     # Diff staging area (a.k.a index) to HEAD (a.k.a last commit)
     dc = diff --cached
+
+    # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
     # Diff working tree to HEAD (a.k.a last commit).
     # Using difftool.tool for visualising diffs.
@@ -268,6 +271,9 @@
 [pager]
     # Use colors when paging regardless of default color setting.
     color = true
+
+    diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified): '
+    show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified): '
 
 [push]
     # See `git help config` and search for "push.default"

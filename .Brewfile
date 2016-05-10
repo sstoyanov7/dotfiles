@@ -44,6 +44,7 @@ brew 'aria2'
 brew 'bfg'
 brew 'cloc'
 brew 'cmake'
+brew 'diff-so-fancy'
 brew 'git'
 brew 'imagemagick', args: ['with-webp']
 brew 'hub'
