@@ -274,7 +274,7 @@
     color = true
 
     diff = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD --pattern='^(added|deleted|modified): '
-    show = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD --pattern='^(added|deleted|modified): '
+    show = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD
 
 [push]
     # See `git help config` and search for "push.default"
