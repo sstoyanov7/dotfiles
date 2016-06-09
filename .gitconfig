@@ -290,6 +290,10 @@
     # Use --autostash when running git pull --rebase and when rebasing interactively
     autoStash = true
 
+[rerere]
+    # Reuse recorded resolutions
+    enabled = true
+
 # URL shorthands
 # 
 # See `git help config` and search for "url.<base>"
