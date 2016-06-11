@@ -38,6 +38,9 @@ filetype plugin indent on
 " Insert
 """"""""
 
+" Configure completion popups
+set completeopt=menuone,longest
+
 " Allow cursor keys in insert mode
 set esckeys
 
@@ -48,6 +51,14 @@ set backspace=indent,eol,start
 set autoindent
 set smartindent
 set cindent
+
+" Expand tabs to spaces
+set expandtab
+
+" Make tabs as wide as four spaces
+set tabstop=4
+set shiftwidth=4
+set shiftround
 
 """""""""
 " Visuals
@@ -68,12 +79,8 @@ let g:netrw_liststyle = 3
 colorscheme spacegray
 let g:spacegray_underline_search = 1
 
-" Expand tabs to spaces
-set expandtab
-
-" Make tabs as wide as four spaces
-set tabstop=4
-set shiftwidth=4
+" Airline theme
+let g:airline_theme='badwolf'
 
 " Disable error bells
 set noerrorbells
@@ -108,15 +115,15 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-
 " Show matching bracket briefly
 set showmatch
 
 " Enhance command-line completion
 set wildmenu
+
+" Show invisible characters
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
 
 """"""""
 " Search
@@ -137,11 +144,33 @@ set incsearch
 " Always show status line
 set laststatus=2
 
-" Enable mouse in all modes
-set mouse=a
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
 
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
+
+"""""""""""""""""""""""
+" Plugin confiuguration
+"""""""""""""""""""""""
+
+" CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
+" Ultisnip
+" NOTE: <f1> otherwise it overrides <tab> forever
+let g:UltiSnipsExpandTrigger="<f1>"
+let g:UltiSnipsJumpForwardTrigger="<f1>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:did_UltiSnips_vim_after = 1
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Disable tComment to escape some entities
+let g:tcomment#replacements_xml={}
 
 """""""""""""""""""
 " Keyboard mappings
@@ -150,13 +179,13 @@ set nostartofline
 " Change mapleader
 let mapleader=","
 
-" Find a tag (,.)
+" <leader>-. to find a tag
 nnoremap <leader>. :CtrlPTag<cr>
 
-" Toggle Tagbar
+" <leader>-k to toggle Tagbar
 nnoremap <silent> <leader>k :TagbarToggle<cr>
 
-" Strip trailing whitespace (,ss)
+" <leader-ss> to strip trailing whitespace
 function! StripWhitespace()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
@@ -165,8 +194,33 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
+
+" <leader>-W save a file as root
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+" <C-L> to clear the highlighting of :set hlsearch
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+" <C-c> to exit insert mode
+inoremap <C-c> <Esc>
+
+" Tabs navigation shortcuts
+nnoremap <C-b>  :tabprevious<CR>
+inoremap <C-b>  <Esc>:tabprevious<CR>i
+nnoremap <C-n>  :tabnext<CR>
+inoremap <C-n>  <Esc>:tabnext<CR>i
+nnoremap <C-t>  :tabnew<CR>
+inoremap <C-t>  <Esc>:tabnew<CR>i
+nnoremap <C-k>  :tabclose<CR>
+inoremap <C-k>  <Esc>:tabclose<CR>i
+
+" lazy ':'
+map \ :
+
+nnoremap <Leader>p :set paste<CR>
+nnoremap <Leader>o :set nopaste<CR>
 
 """"""""""""""""""""
 " Automatic commands
@@ -185,6 +239,11 @@ endif
 """""""
 " Other
 """""""
+
+" Set a short timeout delay
+" Helps with determining sequence of keys involving escape sequences
+set ttimeout
+set ttimeoutlen=50
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -212,3 +271,6 @@ set modelines=4
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
+
+" Automatically reload files if changed outside of Vim and not changed in Vim
+set autoread
