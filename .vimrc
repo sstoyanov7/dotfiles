@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'jpo/vim-railscasts-theme'
+Plug 'ajh17/Spacegray.vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -16,7 +16,8 @@ set nocompatible
 
 filetype plugin indent on    " required
 
-colorscheme railscasts
+colorscheme spacegray
+let g:spacegray_underline_search = 1
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
