@@ -8,6 +8,8 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -100,6 +102,12 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+
+" Find a tag (,.)
+nnoremap <leader>. :CtrlPTag<cr>
+
+" Toggle Tagbar
+nnoremap <silent> <leader>k :TagbarToggle<cr>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
