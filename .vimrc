@@ -16,6 +16,9 @@ call plug#end()
 " Make Vim more useful
 set nocompatible
 
+" Use tree-style listing in netrw
+let g:netrw_liststyle = 3
+
 filetype plugin indent on    " required
 
 colorscheme spacegray
