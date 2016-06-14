@@ -257,6 +257,9 @@
     # Automatically correct and execute mistyped commands
     autocorrect = 1
 
+[interactive]
+    diffFilter = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD
+
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
