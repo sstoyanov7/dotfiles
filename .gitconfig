@@ -232,6 +232,9 @@
     # See "`git help diff` --patience" and "`git help merge` recursive".
     algorithm = patience
 
+    # Use blank lines as a strong hint to identify the changes
+    compactionHeuristic = true
+
     # Diff will detect both renames and copies.
     renames = copies
 
