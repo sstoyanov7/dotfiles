@@ -171,7 +171,7 @@
 
 [apply]
     # Detect whitespace errors when applying a patch
-    whitespace = fix
+    whitespace = warn
 
 [color]
     # Use colors in Git commands that are capable of colored output when
