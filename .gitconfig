@@ -296,6 +296,9 @@
     # Use --autostash when running git pull --rebase and when rebasing interactively
     autoStash = true
 
+    # Warn about removed commits in interactive mode
+    missingCommitsCheck = warn
+
 [rerere]
     # Reuse recorded resolutions
     enabled = true
