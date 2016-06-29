@@ -27,6 +27,9 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Windows
+Plug 'vim-scripts/ZoomWin'
+
 call plug#end()
 
 " Make Vim more useful
