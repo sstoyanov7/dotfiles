@@ -75,9 +75,6 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable
 endif
 
-" Use tree-style listing in netrw
-let g:netrw_liststyle = 3
-
 " Color scheme
 colorscheme spacegray
 let g:spacegray_underline_search = 1
@@ -159,8 +156,13 @@ set nostartofline
 " Plugin confiuguration
 """""""""""""""""""""""
 
+" Use tree-style listing in netrw
+let g:netrw_liststyle = 3
+let g:netrw_list_hide = '\.git,\.DS_Store'
+
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_max_files = 0
 
 " Ultisnip
 " NOTE: <f1> otherwise it overrides <tab> forever
