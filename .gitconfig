@@ -119,6 +119,9 @@
     # Shorthand for mergetool
     mt = mergetool
 
+    # Log commits authored by me
+    mylog = !git log --author=\"$(git config user.name)\"
+
     # Show the not merged branches compared to the current branch
     nm = branch --no-merged
 
@@ -167,7 +170,6 @@
 
     # Shorthand for tag
     t = tag
-    mylog = !git log --author=\"$(git config user.name)\"
 
 [apply]
     # Detect whitespace errors when applying a patch
