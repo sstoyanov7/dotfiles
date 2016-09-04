@@ -168,6 +168,9 @@
     # Shorthand for stash
     st = stash
 
+    # Pull with rebase and push with configured upstream branch
+    sync = git show --stat  pull --rebase && git push
+
     # Shorthand for tag
     t = tag
 
