@@ -56,7 +56,7 @@ brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
 tap 'neovim/neovim'
 brew 'neovim/neovim/neovim'
 brew 'node' # This installs `npm` too using the recommended installation method
-brew 'openssl'
+brew 'openssl@1.1'
 brew 'optipng'
 brew 'p7zip'
 brew 'pigz'
