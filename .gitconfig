@@ -98,14 +98,14 @@
     fb = "!f() { git branch -a --contains $1; }; f"
 
     # Find commits by source code
-    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    fc = "!f() { git l --date=short -S$1; }; f"
 
     # In case of fire
     # https://twitter.com/bozhobg/status/650265599671693312
     fire = "!git commit --all && git push --set-upstream origin HEAD && echo 'LEAVE BUILDING!!!'"
 
     # Find commits by commit message
-    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    fm = "!f() { git l --date=short --grep=$1; }; f"
 
     # Find tags containing commit
     ft = "!f() { git describe --always --contains $1; }; f"
@@ -114,7 +114,16 @@
     h = help
 
     # Pretty log of commits. Supports options of git log
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # The 8-char abbreviation works well with the default pretty format below
+    l = log --abbrev-commit --abbrev=8
+
+    # Same as l, but with graph.
+    # Recursive resolving of aliases break tab-completion for options,
+    # so the command is listed again.
+    lg = log --abbrev-commit --abbrev=8 --graph
+
+    # Same as above, but list local commits not on upstream
+    local = log --abbrev-commit --abbrev=8 @{u}..
 
     # Shorthand for merge
     m = merge
@@ -270,12 +279,22 @@
     # Use --prompt to override.
     prompt = false
 
+[format]
+    pretty = colourful
+
 [help]
     # Automatically correct and execute mistyped commands
     autocorrect = 1
 
 [interactive]
     diffFilter = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD
+
+[log]
+    # Always use .mailmap resolution of author names and emails in git-log
+    mailmap = 1
+
+[mailmap]
+    file = ~/.mailmap
 
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
@@ -298,6 +317,9 @@
 
     diff = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD --pattern='^(added|deleted|modified): '
     show = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD
+
+[pretty]
+    colourful = "format:%Cred%<(8)%h%Creset %<(75,trunc)%s %Cgreen%<(11)%cr%Creset%Cblue%<(17)% aN%Creset%C(yellow)% D%Creset %gn"
 
 [push]
     # See `git help config` and search for "push.default"
