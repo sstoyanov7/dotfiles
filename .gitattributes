@@ -10,3 +10,11 @@
 *.jpeg diff=asciidiff
 *.png diff=asciidiff
 *.gif diff=asciidiff
+
+# Assign language-aware hunk-headers
+*.php diff=php
+*.html.twig diff=html
+*.html diff=html
+*.ruby diff=ruby
+*.rake diff=ruby
+*.js diff="javascript"

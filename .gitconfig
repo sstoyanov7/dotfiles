@@ -262,6 +262,9 @@
 [diff "asciidiff"]
     textconv = ~/bin/img-ascii-diff
 
+[diff "javascript"]
+    xfuncname = "^\\s*(.*?\\bfunction\\b.*?\\(.*?\\))"
+
 [difftool]
     # Difftool will not prompt for every file.
     # Use --prompt to override.
