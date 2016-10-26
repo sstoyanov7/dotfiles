@@ -244,3 +244,17 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components|.Spotlight-V100|.TemporaryItems|.DocumentRevisions-V100|.fseventsd' --dirsfirst "$@" | less -FRNX;
 }
+
+# Ask for confirmation and exit accordingly
+function confirm () {
+	# call with a prompt string or use a default
+	read -r -p "${1:-Are you sure? [y/N]} " response
+	case $response in
+		[yY][eE][sS]|[yY])
+			true
+			;;
+		*)
+			false
+			;;
+	esac
+}
