@@ -17,6 +17,9 @@
     # See`git help add`
     ai = add --interactive
 
+    # List Git aliases with definitions
+    aliases = ! git config --get-regexp ^alias\\. | grep -v "^alias\\.aliases" | sed -e 's/^alias\\.//' -e 's/\\ /\\ =\\ /'
+
     # Amend the currently staged files to the last commit
     # See`git help commit`
     amend = commit --amend --reuse-message=HEAD
