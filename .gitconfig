@@ -135,7 +135,7 @@
     p = push
 
     # Shorthand for pull
-    pl = pull
+    pl = pull --ff-only
 
     # Create a new remote branch with the same name and track it.
     # First argument is remote name. Defaults to "origin".
