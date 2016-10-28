@@ -4,8 +4,11 @@
 while :
 do
     # Outputting like that reduces blinking
-    output=$(git --no-pager log --color=always --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset %s %C(yellow)%D%Creset - %Cgreen(%cd)%Creset' $*)
+    status_output=$(git -c "color.status=always" status --short --branch)
+    log_output=$(git --no-pager log --color=always --abbrev-commit --date=relative --pretty=live $@)
     clear
-    echo "$output"
-    sleep 1
+    echo "$status_output"
+    echo ""
+    echo "$log_output"
+    sleep 2
 done

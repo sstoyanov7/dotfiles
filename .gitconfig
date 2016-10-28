@@ -320,6 +320,7 @@
 
 [pretty]
     colourful = "format:%Cred%<(8)%h%Creset %<(75,trunc)%s %Cgreen%<(11)%cr%Creset%Cblue%<(17)% aN%Creset%C(yellow)% D%Creset %gN"
+    live = "format:%Cred%<(6)%h%Creset %<(50,trunc)%s%C(yellow)% D%Creset %gN"
 
 [push]
     # See `git help config` and search for "push.default"
