@@ -319,7 +319,7 @@
     show = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --tilde --clear-screen --status-column --HILITE-UNREAD
 
 [pretty]
-    colourful = "format:%Cred%<(8)%h%Creset %<(75,trunc)%s %Cgreen%<(11)%cr%Creset%Cblue%<(17)% aN%Creset%C(yellow)% D%Creset %gn"
+    colourful = "format:%Cred%<(8)%h%Creset %<(75,trunc)%s %Cgreen%<(11)%cr%Creset%Cblue%<(17)% aN%Creset%C(yellow)% D%Creset %gN"
 
 [push]
     # See `git help config` and search for "push.default"
