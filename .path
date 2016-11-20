@@ -1,6 +1,9 @@
 # Load GNU coreutils into PATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
+# Discover GNU coreutils man pages
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 # Load binaries globally installed via Composer
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
