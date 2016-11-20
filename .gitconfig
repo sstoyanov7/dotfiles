@@ -70,7 +70,7 @@
     credit = "!f() { git commit --amend --author \"$1 <$2>\" --reuse-message=HEAD; }; f"
 
     # Show the diff between the latest commit and the current state
-    d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
+    d = diff
 
     # Diff staging area (a.k.a index) to HEAD (a.k.a last commit)
     dc = diff --cached
