@@ -46,6 +46,7 @@ brew 'ctags'
 brew 'diff-so-fancy'
 brew 'ghex'
 brew 'git'
+brew 'git-standup'
 brew 'git-utils'
 brew 'imagemagick', args: ['with-webp']
 brew 'hub'
