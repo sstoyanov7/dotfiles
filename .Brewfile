@@ -35,8 +35,6 @@ brew 'homebrew/dupes/zlib'
 # Install PHP and tools
 brew 'homebrew/php/php70', args: ['with-gmp']
 brew 'homebrew/php/php70-xdebug'
-brew 'homebrew/php/php-code-sniffer'
-brew 'homebrew/php/phpunit'
 
 # Install other useful binaries
 brew 'ack'
