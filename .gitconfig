@@ -160,7 +160,7 @@
     # Shorthand for remote
     r = remote
 
-    report = l --since=1.week.ago --first-parent --reverse
+    report = log --abbrev-commit --abbrev=8 --since=1.week.ago --first-parent --reverse
 
     # Interactive rebase with the given number of latest commits
     ri = "!r() { git rebase --interactive HEAD~$1; }; r"
