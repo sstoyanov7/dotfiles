@@ -63,3 +63,6 @@ Thumbs.db
 # IDE-specific #
 ################
 *.sublime-workspace
+
+# Temporary files - both manually and automatically created
+*.tmp
