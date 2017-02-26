@@ -34,4 +34,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 # ======= Composer =========
 
 # Install composer
-curl -sS https://getcomposer.org/installer | php -- --install-dir=$HOME/bin --filename=composer
+./composer-installer.sh
