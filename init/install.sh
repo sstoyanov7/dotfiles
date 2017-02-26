@@ -14,10 +14,10 @@ sudo xcodebuild -license
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install brew bundle
-brew tap Homebrew/bunle
+brew tap Homebrew/bundle
 
 # Install Brew formulae and apps via Cask
-brew bundle Brewfile
+brew bundle --file=Brewfile
 
 # Enable Bash 4 installed from brew
 # Add the Bash shell to the list of legit shells
