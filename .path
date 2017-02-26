@@ -10,8 +10,8 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # Add `$(brew --prefix)/bin` and `$(brew --prefix)/sbin` to the `$PATH`
 export PATH="$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH"
 
-# Add `$(npm --global prefix)/bin` to the `$PATH`
-export PATH=$HOME/node_modules/bin:$PATH
+# Add Yarn and npm global binaries to the `$PATH`
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$(npm --global prefix)/bin:$PATH"
 
 # Add rbenv to PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
