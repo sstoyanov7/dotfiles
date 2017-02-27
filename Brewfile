@@ -49,7 +49,7 @@ brew 'git'
 brew 'git-standup'
 brew 'git-utils'
 brew 'imagemagick', args: ['with-webp']
-brew 'hub'
+brew 'hub', args: ['devel']
 brew 'htop-osx'
 brew 'jp2a'
 brew 'jpegoptim'
