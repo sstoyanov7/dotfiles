@@ -5,7 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 
 " Autocompletion and snippets
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " supertab has configuration problems on Vim 8
 " See https://github.com/ervandew/supertab/issues/185
 " Plug 'ervandew/supertab'
