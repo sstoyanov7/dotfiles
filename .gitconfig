@@ -188,6 +188,8 @@
     # Shorthand for stash
     st = stash
 
+    standup = log --all --no-merges --graph --date=relative --committer=$(git config --get user.email) --pretty=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --since="$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi)"
+
     # Pull with rebase and push with configured upstream branch
     sync = git show --stat  pull --rebase && git push
 
