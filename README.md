@@ -23,7 +23,7 @@ It is recommended to fork the repo and adjust it as needed.
 When setting up a new computer use the `install.sh` script to install Homebrew, Homebrew budle, rbenv, vim-plug, Composer, set up Bash 4 and the XCode CLI tools.
 
 ``` bash
-./install.sh
+./init/install.sh
 ```
 
 # Updating
