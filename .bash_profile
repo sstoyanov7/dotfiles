@@ -83,3 +83,8 @@ eval "$(gulp --completion=bash)"
 
 # Symfony console completion
 eval "$(symfony-autocomplete --aliases=c)"
+
+# Set command history options
+HISTSIZE=5000
+HISTFILESIZE=10000
+shopt -s histappend
